@@ -1,0 +1,53 @@
+
+.tt{
+    border-collapse: collapse;
+    background: transparent;
+}
+.list{
+    width:100%;
+}
+.tt tr:nth-child(even),.tt .list thead>tr {
+    background-color: #dddddd;
+}
+
+textarea{
+    width: 70%;
+    
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button]{
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form div.form-action-buttons{
+    text-align: right;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}

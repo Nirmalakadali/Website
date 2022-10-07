@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail:400" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/crud.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    .flipX {
+        font-family: "Tangerine";
+        font-size: 90px;
+        animation: 1s anim-flipX ease infinite;
+    }
+
+    @keyframes anim-flipX {
+        0% {
+            opacity: 0;
+            transform: rotateX(90def);
+        }
+
+        50% {
+            opacity: 1;
+            transform: rotateX(720deg);
+        }
+
+        100% {
+            /* animate nothing to pause animation at the end */
+            opacity: 1;
+            transform: rotateX(720deg);
+        }
+    }
+
+    .waviy {
+        position: relative;
+    }
+
+    .waviy span {
+        position: relative;
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        font-family: "Sofia";
+        text-shadow: #000;
+        text-transform: uppercase;
+        animation: flip 2s infinite;
+        animation-delay: calc(.2s * var(--i))
+    }
+
+    @keyframes flip {
+
+        0%,
+        80% {
+            transform: rotateY(360deg)
+        }
+    }
+
+    .tt {
+        border-collapse: collapse;
+        background: transparent;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .tt tr:nth-child(even),
+    .tt .list thead>tr {
+        background-color: #dddddd;
+    }
+
+    textarea {
+        width: 70%;
+
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=button] {
+        width: 30%;
+        background-color: #ddd;
+        color: #000;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    form div.form-action-buttons {
+        text-align: right;
+    }
+
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        cursor: pointer;
+        color: #0000ee;
+        margin-right: 4px;
+    }
+
+    label.validation-error {
+        color: red;
+        margin-left: 5px;
+    }
+
+    .hide {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="image">
+
+        <nav>
+            <div class="menu">
+                <div class="logo" style="font-family: 'Tangerine', serif;
+                            font-size: 48px;
+                            text-shadow: 4px 4px 4px #aaa;">
+                    <a href="#">Personal website</a>
+                </div>
+                <ul>
+                    <li><a href="#" class="fa fa-facebook"></a>
+                    </li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-google"></a></li>
+                    <li><a href="#" class="fa fa-snapchat-ghost"></a> </li>
+                </ul>
+            </div>
+        </nav>
+        <center>
+        <main>
+            <div class="marker"></div>
+            <h1 style="font-family: 'Work Sans', sans-serif;font-size: 50px;color: black;"> W</h1>
+            <h1 class="r" style="font-family: 'Work Sans', sans-serif;font-size: 50px;color: black;">e</h1>
+            <h1 class="e1" style="font-family: 'Work Sans', sans-serif;font-size: 50px;color: black;">b</h1>
+            <h1 class="s1" style="font-family: 'Work Sans', sans-serif;font-size: 50px;color: black;">S</h1>
+            <h1 class="s2" style="font-family: 'Work Sans', sans-serif;font-size: 50px;color: black;">i</h1>
+            <h1 class="e2" style="font-family: 'Work Sans', sans-serif;font-size: 50px;color: black;">T</h1>
+            <h1 style="font-family: 'Work Sans', sans-serif;font-size: 50px;color: black;">e</h1>
+        </main>
+        </center>
+       
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       
+        <center>
+            <div class="form" >
+
+                <table border="1" width=75%>
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="font-effect-outline">Personal Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>About Myself: </td>
+                            <td colspan="2"> My name is Nirmala, Mom's Devil, Dad's Princess,Bro's Crime Partner &nbsp;&nbsp; <br />
+                                Chocolate addict<br />Traveller<br /> Btech CSE student
+                            </td>
+                        </tr>
+                        <tr height="10px">
+                            <td>My profile pic: </td>
+                            <td colspan="2"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnUxoGI8sSUPeO5CQdhh-o7nNtoyFmvZeGDw&usqp=CAU">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td rowspan=4>
+                                Education Background
+                            </td>
+                            <td>
+                                Ravindra primary and high school&nbsp;&nbsp;</td><td> [2009-2017]<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Government high school &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              </td><td> [2017-2019]
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RGUKT ongole{P1 && P2} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                               </td><td> [2019-2021]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                IIIT Hyderabad {Engineering-CSE} </td><td>[2021-2025]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan=4>
+                                Achievements:
+                            </td>
+                            <td>
+                                1. CGPA in 10th: 10/10</td><td>2019
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2. CGPA in PUC : 9.6
+
+                            </td>
+                            <td>2020</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3. Sports medal in shuttle
+                            </td>
+                            <td>2018</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4. Prizes in essay writings and quizes
+                            </td>
+                            <td>2008-2019</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Skills:
+                            </td>
+                            <td colspan="2">
+                                Reading books <br />
+                                Seeing Horror movies alone<br />
+                                Drawing and painting
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+        <br><br> <br><br><br><br><br><br><br>
+            <div class="codi" >
+
+                <button id="btn" style="color:white;border-radius: 50px;cursor: pointer;">Color-1</button>&nbsp;&nbsp;
+                <button id="btn1" style="color: white; border-radius: 50px;cursor: pointer;">Color-2
+                    </button>&nbsp;&nbsp;
+                <button id="btn2" style="color: white; border-radius: 50px;cursor: pointer;">Color-3
+                    </button>&nbsp;&nbsp;
+                <button id="btn3" style="color: white; border-radius: 50px;cursor: pointer;">Color-4</button>&nbsp;&nbsp;
+                <button id="btn4" style="color: white; border-radius: 50px;cursor: pointer;">Color-5</button>&nbsp;&nbsp;
+            </div>
+            <script src="js/bg.js">
+
+            </script>
+            <center>
+            <h3 id="demo" style="padding-top: 40px;">This is paragraph</h3>
+            <div class="cod" style="padding-top:50px;align-content: center;align-items: center;">
+               
+                <button id="f1" style="color: black;border-radius: 50px;cursor: pointer;">small</button>&nbsp;&nbsp;
+                <button id="f2" style="color:black; border-radius: 50px;cursor: pointer;">large</button>&nbsp;&nbsp;
+                <button id="f3" style="color: black; border-radius: 50px;cursor: pointer;">larger</button>&nbsp;&nbsp;
+            </div>
+            </center>
+
+            <script src="js/font.js">
+
+            </script>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div class="tab" >
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <td>
+                                <h1 style="font-size: 50px;
+        font-family:  Sofia, sans-serif; color: #fff; text-align: left; animation: glow 1s ease-in-out
+                infinite alternate; } @keyframes glow { from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0
+                30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073; } to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px
+                #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; } ">Hyperlinks using images</h1>
+                            </td>
+                            <td>
+                                <h1 style="font-size: 50px;
+        font-family:Sofia, sans-serif;
+        color: #fff;
+        text-align: left;
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      }
+      
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    
+    ">Hyperlinks using text</h1>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">
+                                <a
+                                    href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.forbes.com%2Fsites%2Fceciliarodriguez%2F2020%2F11%2F12%2Fworld-best-photos-of-animals-20-winning-images-by-agora%2F&psig=AOvVaw00c55f0cE0BeQWrKMv9cqb&ust=1650908218106000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPDriMGerfcCFQAAAAAdAAAAABAJ">
+                                    <img src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-118143566.jpg"
+                                        style="display: inline-block;
+                    size: 50%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    width: 300px;
+                    height: 300px;
+                    border: 2px solid white;
+                    box-shadow: 0px 2px 6px black;">
+                                </a>
+                                <a href="css/crud.css">
+                                    <img src="https://tinypng.com/images/social/website.jpg" style="display: inline-block;
+                size: 50%;
+                object-fit: cover;
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+                border: 2px solid white;
+                box-shadow: 0px 2px 6px black;">
+                                </a>
+                            </td>
+                            <td>
+                                <a
+                                    href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.forbes.com%2Fsites%2Fceciliarodriguez%2F2020%2F11%2F12%2Fworld-best-photos-of-animals-20-winning-images-by-agora%2F&psig=AOvVaw00c55f0cE0BeQWrKMv9cqb&ust=1650908218106000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPDriMGerfcCFQAAAAAdAAAAABAJ">Click
+                                    this link to go to the another website
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="css/crud.css">Click
+                                    this
+                                    link
+                                    to
+                                    go local file</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h2 style="color: rgb(223, 96, 50);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Another website
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Local
+                                    file</h2>
+                            </td>
+                            <td>
+                                <h2 style="color: rgb(223, 96, 50);">Hyperlinks with hover affect</h2>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <br>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            <div class="ne" style="padding-bottom: 90px;">
+                <div class="waviy">
+                    <span style="--i:1">N</span>
+                    <span style="--i:2">e</span>
+                    <span style="--i:3">w</span>
+                    <span style="--i:4">s</span>
+                    <span style="--i:5">&</span>
+                    <span style="--i:6">u</span>
+                    <span style="--i:7">p</span>
+                    <span style="--i:8">d</span>
+                    <span style="--i:9">a</span>
+                    <span style="--i:10">t</span>
+                    <span style="--i:11">e</span>
+                    <span style="--i:12">s</span>
+                </div>
+
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <textarea name="News" id="name" cols="10" rows="10"
+                        placeholder="Enter new news and updates"></textarea>
+                    <input type="button" value="Submit" onclick='manageData()'>
+                </form>
+                <div id="msg" style="font-family:  Sofia, sans-serif; font-style: italic;font-size: 40px;"></div>
+
+                <h1 class="flipX">List(Past record)</h1>
+                <table border="1" class="tt" style="width: 79%;">
+                    <thead>
+                        <tr>
+                            <td style=" border: 1px solid #dddddd;
+                                        text-align: left;
+                                        padding: 8px;">S.No</td>
+                            <td style=" border: 1px solid #dddddd;
+                                        text-align: left;
+                                        padding: 8px;">News && Updates</td>
+                            <td style=" border: 1px solid #dddddd;
+                                        text-align: left;
+                                        padding: 8px;">Edit or Delete</td>
+                        </tr>
+                        <thead>
+                        <tbody id="root">
+
+                    <tbody>
+                </table>
+                <script src="js/crud.js"></script>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>
